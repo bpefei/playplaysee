@@ -122,6 +122,33 @@ depend:
 	$(MAKE) -f CMakeFiles\1.dir\build.make CMakeFiles/1.dir/build
 .PHONY : 1/fast
 
+fileIO.obj: fileIO.c.obj
+
+.PHONY : fileIO.obj
+
+# target to build an object file
+fileIO.c.obj:
+	$(MAKE) -f CMakeFiles\1.dir\build.make CMakeFiles/1.dir/fileIO.c.obj
+.PHONY : fileIO.c.obj
+
+fileIO.i: fileIO.c.i
+
+.PHONY : fileIO.i
+
+# target to preprocess a source file
+fileIO.c.i:
+	$(MAKE) -f CMakeFiles\1.dir\build.make CMakeFiles/1.dir/fileIO.c.i
+.PHONY : fileIO.c.i
+
+fileIO.s: fileIO.c.s
+
+.PHONY : fileIO.s
+
+# target to generate assembly for a file
+fileIO.c.s:
+	$(MAKE) -f CMakeFiles\1.dir\build.make CMakeFiles/1.dir/fileIO.c.s
+.PHONY : fileIO.c.s
+
 is_something.obj: is_something.c.obj
 
 .PHONY : is_something.obj
@@ -185,6 +212,9 @@ help:
 	@echo ... 1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... fileIO.obj
+	@echo ... fileIO.i
+	@echo ... fileIO.s
 	@echo ... is_something.obj
 	@echo ... is_something.i
 	@echo ... is_something.s

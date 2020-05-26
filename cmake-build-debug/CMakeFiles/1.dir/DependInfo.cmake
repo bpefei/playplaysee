@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "D:/ClionCode/1/fileIO.c" "D:/ClionCode/1/cmake-build-debug/CMakeFiles/1.dir/fileIO.c.obj"
   "D:/ClionCode/1/is_something.c" "D:/ClionCode/1/cmake-build-debug/CMakeFiles/1.dir/is_something.c.obj"
   "D:/ClionCode/1/main.c" "D:/ClionCode/1/cmake-build-debug/CMakeFiles/1.dir/main.c.obj"
   )

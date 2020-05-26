@@ -1,26 +1,18 @@
 #include <stdio.h>
-#include "is_something.h"
+#include "fileIO.h"
 
 int main()
 {
-    char G[6][6];
-    for (int i = 0; i < 5; ++i)
+    int cntLines;
+    char*** grm = getGrammer("../G.txt", &cntLines);
+    for (int i = 0; i < cntLines; ++i)
     {
-        for (int j = 0; j < 5; ++j)
+        for (int j = 0; j < 10; ++j)
         {
-            G[i][j] = 'a';
+            printf("%s", grm[i][j]);
         }
-        G[i][5] = '\0';
     }
-    for (int i = 0; i < 5; ++i)
-    {
-        G[5][i] = ' ';
-    }
-    G[5][5] = '\0';
+    freeGrammer(grm, cntLines);
 
-    for (int i = 0; i < 6; ++i)
-    {
-        printf("%d\n", isspace_string(G[i]));
-    }
-    return 0;
 }
+//../是相对目录的当前目录
