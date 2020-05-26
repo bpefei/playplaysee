@@ -8,12 +8,6 @@
 
 D:/ClionCode/1/bool.h
 
-D:/ClionCode/1/fileIO.c
-string.h
--
-fileIO.h
-D:/ClionCode/1/fileIO.h
-
 D:/ClionCode/1/fileIO.h
 stdio.h
 -
@@ -25,4 +19,10 @@ D:/ClionCode/1/is_something.h
 D:/ClionCode/1/is_something.h
 bool.h
 D:/ClionCode/1/bool.h
+
+D:/ClionCode/1/main.c
+stdio.h
+-
+fileIO.h
+D:/ClionCode/1/fileIO.h
 

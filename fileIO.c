@@ -103,16 +103,16 @@ Grammer getGrammer(const char* filename, int* nLs)
         }
         k = 0;
     }
-    char*** newArray = (char***) malloc(nLines + 1);
+    Grammer newArray = (Grammer) malloc((nLines + 1) * sizeof(char**));
     for (int i = 0; i < nLines + 1; ++i)
     {
-        newArray[i] = (char**) malloc(10);
+        newArray[i] = (char**) malloc(10 * sizeof(char*));
     }
     for (int i = 0; i < nLines + 1; ++i)
     {
         for (int j = 0; j < 10; ++j)
         {
-            newArray[i][j] = (char*) malloc(10);
+            newArray[i][j] = (char*) malloc(10 * sizeof(char));
         }
 
     }

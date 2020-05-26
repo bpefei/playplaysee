@@ -9,8 +9,9 @@ int main()
     {
         for (int j = 0; j < 10; ++j)
         {
-            printf("%s", grm[i][j]);
+            printf("%s\n", grm[i][j]);
         }
+        printf("\n");
     }
     freeGrammer(grm, cntLines);
 
