@@ -77,6 +77,16 @@ Grammer getGrammer(const char* filename, int* nLs)
     // nLines+1条产生式，
     // 每条产生式最多10个单个产生式，
     // 每单个产生式最多10个字符
+    for (int i = 0; i < nLines + 1; ++i)
+    {
+        for (int j = 0; j < 10; ++j)
+        {
+            for (int k = 0; k < 10; ++k)
+            {
+                G[i][j][k] = '\0';
+            }
+        }
+    }
     int k = 0;
     for (int i = 0; i < nLines; ++i)
     {
