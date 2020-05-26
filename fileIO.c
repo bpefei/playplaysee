@@ -20,6 +20,7 @@ FILE* open(const char* filename, unsigned int* nLines)
             if (tempC == '\n')
                 cnt++;
         }
+        cnt++;
         *nLines = cnt;
         rewind(fp);
     }
@@ -58,7 +59,7 @@ char* simplify(string str)
 
     }
     p[j] = '\0';
-    char* newstr = (char*) malloc(strlen(p));
+    char* newstr = (char*) malloc(strlen(p) * sizeof(char));
     for (int k = 0; k < strlen(p); ++k)
     {
         newstr[k] = p[k];
@@ -69,7 +70,7 @@ char* simplify(string str)
 
 Grammer getGrammer(const char* filename, int* nLs)
 {
-    char* p = (char*) malloc(100);
+    char* p = (char*) malloc(100 * sizeof(char));
     unsigned int nLines;
     FILE* fp = open(filename, &nLines);
     *nLs = (int) nLines;
@@ -88,7 +89,7 @@ Grammer getGrammer(const char* filename, int* nLs)
         }
     }
     int k = 0;
-    for (int i = 0; i < nLines; ++i)
+    for (int i = 0; i < nLines + 1; ++i)
     {
         // G[i]是一行10个char*
         fgets(p, 100, fp);
@@ -112,7 +113,10 @@ Grammer getGrammer(const char* filename, int* nLs)
             }
         }
         k = 0;
+        free(simpleString);
     }
+    free(p);
+    fclose(fp);
     Grammer newArray = (Grammer) malloc((nLines + 1) * sizeof(char**));
     for (int i = 0; i < nLines + 1; ++i)
     {

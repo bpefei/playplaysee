@@ -1,2 +1,4 @@
 E -> aB | bA
-E' -> pE' | ~
+E' -> pE | ~
+F -> bAb | (E)
+F' -> dF | ~
