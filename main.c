@@ -15,6 +15,8 @@ int main()
         }
         printf("\n");
     }
+    printf("%d\n", GrammerLength(grm));
+
     freeGrammer(grm, cntLines);
 
 

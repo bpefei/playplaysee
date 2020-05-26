@@ -19,4 +19,6 @@ Grammer getGrammer(const char* filename, int* nLs);
 
 void freeGrammer(Grammer waste, int nLs);
 
+int GrammerLength(Grammer grammer);
+
 #endif //INC_1_FILEIO_H

@@ -2,3 +2,4 @@ E -> aB | bA
 E' -> pE | ~
 F -> bAb | (E)
 F' -> dF | ~
+W -> hatE | vEr | Som | etHing

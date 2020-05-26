@@ -107,6 +107,7 @@ Grammer getGrammer(const char* filename, int* nLs)
         }
         k = 0;
         free(simpleString);
+        memset(p, '\0', 100);
     }
     free(p);
     fclose(fp);
@@ -123,7 +124,7 @@ Grammer getGrammer(const char* filename, int* nLs)
         }
 
     }
-    for (int i = 0; i < nLines + 1; ++i)
+    for (int i = 0; i < nLines; ++i)
     {
         for (int j = 0; j < 10; ++j)
         {
@@ -146,4 +147,18 @@ void freeGrammer(Grammer waste, int nLs)
         }
         free(waste[i]);
     }
+}
+
+int GrammerLength(Grammer grammer)
+{
+    char** p = null;
+    int i = 0;
+    for (;; ++i)
+    {
+        p = grammer[i];
+        if (is_ascii_number(p[0][0]))
+            break;
+    }
+    return i;
+
 }

@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/1.dir/fileIO.c.obj"
   "CMakeFiles/1.dir/is_something.c.obj"
   "CMakeFiles/1.dir/main.c.obj"
+  "CMakeFiles/1.dir/process.c.obj"
   "lib1.dll.a"
 )
 

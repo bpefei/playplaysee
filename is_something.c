@@ -26,3 +26,24 @@ bool isspace_string(const char *string)
     }
     return flag;
 }
+
+bool is_ascii_number(char c)
+{
+    int num = (int)c;
+    return num >= 0 && num <= 9;
+}
+
+bool blank_character_is_in_set(char* set)
+{
+    int len = (int)strlen(set);
+    bool flag = false;
+    for (int i = 0; i < len; ++i)
+    {
+        if (set[i] == '~')
+        {
+            flag = true;
+            break;
+        }
+    }
+    return flag;
+}

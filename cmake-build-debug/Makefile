@@ -203,6 +203,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\1.dir\build.make CMakeFiles/1.dir/main.c.s
 .PHONY : main.c.s
 
+process.obj: process.c.obj
+
+.PHONY : process.obj
+
+# target to build an object file
+process.c.obj:
+	$(MAKE) -f CMakeFiles\1.dir\build.make CMakeFiles/1.dir/process.c.obj
+.PHONY : process.c.obj
+
+process.i: process.c.i
+
+.PHONY : process.i
+
+# target to preprocess a source file
+process.c.i:
+	$(MAKE) -f CMakeFiles\1.dir\build.make CMakeFiles/1.dir/process.c.i
+.PHONY : process.c.i
+
+process.s: process.c.s
+
+.PHONY : process.s
+
+# target to generate assembly for a file
+process.c.s:
+	$(MAKE) -f CMakeFiles\1.dir\build.make CMakeFiles/1.dir/process.c.s
+.PHONY : process.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -221,6 +248,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... process.obj
+	@echo ... process.i
+	@echo ... process.s
 .PHONY : help
 
 
